@@ -6,7 +6,7 @@
   <title>Resume</title>
   <link href="image/favicon.ico" rel="icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-  <link rel="stylesheet" href="css/main.css">
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
   <style>
     body {
       margin: 0;
@@ -16,24 +16,49 @@
       color: #333;
     }
     .container {
-      max-width: 960px;
+      display: flex;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
     }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
+    .content {
+      flex: 1;
+      padding: 20px;
     }
-    header h1 {
-      font-size: 2.5rem;
-      color: #2c3e50;
+    nav {
+      position: sticky;
+      top: 20px;
+      flex: 0 0 200px;
+      margin-left: 20px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ecf0f1;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      height: fit-content;
     }
-    header p {
-      font-size: 1.2rem;
-      color: #7f8c8d;
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      margin-bottom: 10px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #34495e;
+      font-size: 1rem;
+      padding: 5px;
+      display: block;
+    }
+    nav ul li a.active {
+      background-color: #3498db;
+      color: #ffffff;
+      border-radius: 5px;
     }
     section {
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       padding: 20px;
       background: #ffffff;
       border-radius: 8px;
@@ -45,36 +70,6 @@
       margin-bottom: 15px;
       border-bottom: 2px solid #ecf0f1;
       padding-bottom: 5px;
-    }
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .row-left {
-      flex: 1;
-      min-width: 200px;
-      margin-right: 20px;
-    }
-    .row-right {
-      flex: 2;
-    }
-    .project h4 {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      color: #2c3e50;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .skills ul li {
-      margin: 5px 0;
-      padding: 8px;
-      background: #ecf0f1;
-      border-radius: 5px;
     }
     footer {
       text-align: center;
@@ -88,84 +83,110 @@
       text-decoration: underline;
     }
     @media (max-width: 768px) {
-      .row {
+      .container {
         flex-direction: column;
       }
-      .row-left {
-        margin-right: 0;
+      nav {
+        margin: 0 auto;
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>안녕하세요, 저는 오재헌입니다<span class="period-mark">.</span></h1>
-      <p>개발자로서의 꿈을 키워나가기 위해서 노력하고 있습니다.잘 부탁드립니다.</p>
-    </header>
-    <h2>Experience</h2>
-    <section>
-      <div class="row">
-        <div class="row-left">
+    <!-- 본문 내용 -->
+    <div class="content">
+      <header>
+        <h1>안녕하세요, 저는 오재헌입니다<span class="period-mark">.</span></h1>
+        <p>개발자로서의 꿈을 키워나가기 위해서 노력하고 있습니다. 잘 부탁드립니다.</p>
+      </header>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <div>
           <h3>아이티스쿨<br>정보보호교육원</h3>
           <p class="role">Backend Engineer</p>
           <p>2023.06 ~ 2024.12</p>
+          <ul>
+            <li>HTML, CSS, JavaScript 등 프론트엔드 구현</li>
+            <li>Java, Spring을 활용한 백엔드 구현</li>
+            <li>AWS의 EC2 서버를 활용한 배포 경험</li>
+          </ul>
+          <p><strong>Tech Stack:</strong> Java, Spring, MyBatis, HTML, CSS, JavaScript, AWS</p>
         </div>
-        <div class="row-right">
-          <div class="project">
-            <h4>프로젝트: 빵집 홈페이지 구현</h4>
-            <ul>
-              <li>HTML, CSS, JavaScript 등 프론트엔드 구현</li>
-              <li>Java, Spring을 활용한 백엔드 구현</li>
-              <li>AWS의 EC2 서버를 활용한 배포 경험</li>
-            </ul>
-            <p><strong>Tech Stack:</strong> Java, Spring, MyBatis, HTML, CSS, JavaScript, AWS</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="row">
-        <div class="row-left">
+        <div>
           <h3>테크노프로디자인</h3>
           <p class="role">Semiconductor Engineer</p>
           <p>2019.07 ~ 2022.03</p>
+          <ul>
+            <li>cadence Tool을 사용하여 설계</li>
+            <li>PowerSi, PowerDC를 사용하여 설계 검증</li>
+            <li>HFSS 활용하여 3D 모델 검증</li>
+          </ul>
+          <p><strong>Tech Stack:</strong> PowerSI, PowerDC, HFSS</p>
         </div>
-        <div class="row-right">
-          <div class="project">
-            <h4>경력 사항</h4>
-            <ul>
-              <li>cadence Tool을 사용하여 설계</li>
-              <li>PowerSi, PowerDC를 사용하여 설계 검증</li>
-              <li>HFSS 활용하여 3D 모델 검증</li>
-            </ul>
-            <p><strong>Tech Stack:</strong> PowerSI, PowerDC, HFSS</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <h2>Education</h2>
-    <section>
-      <h3>대전대학교</h3>
-      <p>전자정보통신공학과 (2013.03 ~ 2019.02)</p>
-      <p>컴퓨터구조, 자료구조, 프로그래밍 등의 과목을 이수하였습니다.</p>
-    </section>
-    <h2>Skills</h2>
-    <section>
-      <ul class="skills">
-        <li>Java, Spring, MyBatis (중)</li>
-        <li>HTML, CSS, JavaScript (하)</li>
-        <li>AWS (EC2, S3) (하)</li>
-      </ul>
-    </section>
-    <footer>
-      <h2>Contact</h2>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <h3>대전대학교</h3>
+        <p>전자정보통신공학과 (2013.03 ~ 2019.02)</p>
+        <p>컴퓨터구조, 자료구조, 프로그래밍 등의 과목을 이수하였습니다.</p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Java, Spring, MyBatis (중)</li>
+          <li>HTML, CSS, JavaScript (하)</li>
+          <li>AWS (EC2, S3) (하)</li>
+        </ul>
+      </section>
+
+      <footer id="contact">
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:mykd2012@gmail.com">이메일</a></li>
+          <li><a href="https://naver.com">블로그</a></li>
+          <li><a href="https://naver.com">깃허브</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- 네비게이션 바 -->
+    <nav>
       <ul>
-        <li><a href="mailto:mykd2012@gmail.com">이메일</a></li>
-        <li><a href="https://naver.com">블로그</a></li>
-        <li><a href="https://naver.com">깃허브</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-    </footer>
+    </nav>
   </div>
+
+  <script>
+    // 스크롤 시 섹션 감지 및 메뉴 강조
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 50) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
