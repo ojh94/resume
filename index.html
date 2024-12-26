@@ -3,73 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>resume</title>
+  <title>Resume</title>
   <link href="image/favicon.ico" rel="icon">
-  <!-- 폰트 -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-  <link href="css/main.css" rel="stylesheet">	
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Pretendard', sans-serif;
+      line-height: 1.6;
+      background-color: #f9fafb;
+      color: #333;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #7f8c8d;
+    }
+    section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      font-size: 1.8rem;
+      color: #34495e;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ecf0f1;
+      padding-bottom: 5px;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .row-left {
+      flex: 1;
+      min-width: 200px;
+      margin-right: 20px;
+    }
+    .row-right {
+      flex: 2;
+    }
+    .project h4 {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #2c3e50;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .skills ul li {
+      margin: 5px 0;
+      padding: 8px;
+      background: #ecf0f1;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+    }
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column;
+      }
+      .row-left {
+        margin-right: 0;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
+    <header>
+      <h1>안녕하세요, 저는 오재헌입니다<span class="period-mark">.</span></h1>
+      <p>개발자로서의 꿈을 키워나가기 위해서 노력하고 있습니다.잘 부탁드립니다.</p>
+    </header>
+    <h2>Experience</h2>
     <section>
-      <h1>반갑습니다,
-        <br>
-        저는 오재헌입니다<span class="period-mark">.</span>
-      </h1>
-      <p class="big-paragraph">
-        &nbsp;대전 소재의 아이티스쿨에서 &quot;AWS기반 Java&Spring 백엔드 개발자 양성&quot; 과정을 수강하고 있는 백엔드 엔지니어 지망생입니다.
-      </p>
-      <p class="big-paragraph">
-        &nbsp;Java와 SpringBoot를 활용하여 서버 사이드에서 프로그래밍 경험이 있으며, AWS를 통한 배포 환경 구성을 수행하였습니다.
-      </p>
-      <p class="big-paragraph">
-        &nbsp;기존 프로세스를 자동화하고 효율적으로 개선하는 일에 기여하여 비즈니스 성장을 돕고 싶습니다.
-      </p>
-    </section>
-    <section>
-      <h2>
-        Experience<span class="period-mark">.</span>
-      </h2>
       <div class="row">
         <div class="row-left">
-          <h3>
-            아이티스쿨<br>
-            정보보호교육원
-          </h3>
-          <span class="role">Backend Engineer</span>
-          <br>
-          <span>
-            <time datetime="2024-06-17">2023.06</time>
-            &nbsp~&nbsp
-            <time datetime="2024-12-17">2024.12</time>
-          </span>
+          <h3>아이티스쿨<br>정보보호교육원</h3>
+          <p class="role">Backend Engineer</p>
+          <p>2023.06 ~ 2024.12</p>
         </div>
         <div class="row-right">
           <div class="project">
-            <h4>
-              프로젝트명<span class="period-mark">.</span>
-            </h4>
-            <span class="time">
-              <time datetime="2024-00-00">2024.00</time>
-              &nbsp~&nbsp
-              <time datetime="2024-12-17">2024.12</time>
-            </span>
-            <h5>
-              Description<span class="period-mark">.</span>
-            </h5>
-            <p>빵집 홈페이지 구현</p>
-            <h5>
-              What did I do<span class="period-mark">.</span>
-            </h5>
+            <h4>프로젝트: 빵집 홈페이지 구현</h4>
             <ul>
               <li>HTML, CSS, JavaScript 등 프론트엔드 구현</li>
               <li>Java, Spring을 활용한 백엔드 구현</li>
               <li>AWS의 EC2 서버를 활용한 배포 경험</li>
             </ul>
-            <h5>
-              Tech Stack<span class="period-mark">.</span>
-            </h5>
-            <p>Java, Spring, MyBatis, HTML, CSS, JavaScript, AWS</p>
+            <p><strong>Tech Stack:</strong> Java, Spring, MyBatis, HTML, CSS, JavaScript, AWS</p>
           </div>
         </div>
       </div>
@@ -77,92 +127,45 @@
     <section>
       <div class="row">
         <div class="row-left">
-          <h3>
-            테크노프로디자인<br>
-            
-          </h3>
-          <span class="role">semiconductor Engineer<br></span>
-          <span>
-            <time datetime="2019-07-01">2019.07</time>
-            &nbsp~&nbsp
-            <time datetime="2022-03-02">2022.03</time>
-          </span>
+          <h3>테크노프로디자인</h3>
+          <p class="role">Semiconductor Engineer</p>
+          <p>2019.07 ~ 2022.03</p>
         </div>
         <div class="row-right">
           <div class="project">
-            <h4>
-              경력사항<span class="period-mark">.</span>
-            </h4>
-            <h5>
-              Description<span class="period-mark">.</span>
-            </h5>
-            <p>반도체 설계 & 테스터 검증</p>
-            <h5>
-              What did I do<span class="period-mark">.</span>
-            </h5>
+            <h4>경력 사항</h4>
             <ul>
               <li>cadence Tool을 사용하여 설계</li>
               <li>PowerSi, PowerDC를 사용하여 설계 검증</li>
-              <li>HFSS 활용하여 3D모델 검증</li>
+              <li>HFSS 활용하여 3D 모델 검증</li>
             </ul>
-            <h5>
-              Tech Stack<span class="period-mark">.</span>
-            </h5>
-            <p>PowerSI, PowerDc, HFSS</p>
+            <p><strong>Tech Stack:</strong> PowerSI, PowerDC, HFSS</p>
           </div>
         </div>
       </div>
     </section>
+    <h2>Education</h2>
     <section>
-      <h2>
-        Other Experience<span class="period-mark">.</span>
-      </h2>
-      <div class="other">
-        <h3>
-          대전대학교<span class="period-mark">.</span>
-        </h3>
-        <span class="role">전자정보통신공학과</span>
-        <span class="role">
-          <time datetime="2013-03">2013.03</time>
-          &nbsp~&nbsp
-          <time datetime="2019-02">2019.03</time>
-          <p>
-            전자정보통신공학과에서 4년간 공부하며 컴퓨터구조, 자료구조, 프로그래밍 등의 과목을 이수하였습니다. 
-          </p>
-        </span>
-      </div>
+      <h3>대전대학교</h3>
+      <p>전자정보통신공학과 (2013.03 ~ 2019.02)</p>
+      <p>컴퓨터구조, 자료구조, 프로그래밍 등의 과목을 이수하였습니다.</p>
     </section>
+    <h2>Skills</h2>
     <section>
-      <h2>
-        Skills<span class="period-mark">.</span>
-      </h2>
-      <div class="other">
-        <h3>
-          Web<span class="period-mark">.</span>
-        </h3>
-        <ul>
-          <li>(하) HTML, CSS, JavaScript 등 프론트엔드 구현 경험</li>
-          <li>(중) Java, Spring을 활용한 백엔드 구현 경험</li>
-          <li>(하) AWS의 EC2 서버를 활용한 배포 경험</li>
-        </ul>
-      </div>
-    </section>
-    <section>
-      <h2>
-        Contact<span class="period-mark">.</span>
-      </h2>
-      <ul>
-        <li>
-          <a href="mykd2012@gmail.com">이메일</a>
-        </li>
-        <li>
-          <a href="https://naver.com">블로그</a>
-        </li>
-        <li>
-          <a href="https://naver.com">깃허브</a>
-        </li>
+      <ul class="skills">
+        <li>Java, Spring, MyBatis (중)</li>
+        <li>HTML, CSS, JavaScript (하)</li>
+        <li>AWS (EC2, S3) (하)</li>
       </ul>
     </section>
+    <footer>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:mykd2012@gmail.com">이메일</a></li>
+        <li><a href="https://naver.com">블로그</a></li>
+        <li><a href="https://naver.com">깃허브</a></li>
+      </ul>
+    </footer>
   </div>
 </body>
 </html>
